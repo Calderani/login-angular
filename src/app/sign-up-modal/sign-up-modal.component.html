@@ -1,4 +1,3 @@
-<app-title-header></app-title-header>
 <form>
   <p class="input_login_form">
     <mat-form-field appearance="outline">
@@ -15,16 +14,12 @@
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Confirme o seu password" [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
   </p>
-  <div class="div_remember">
-    <mat-checkbox color="primary"><span class="form_text">Lembrar-me</span></mat-checkbox>
-    <a class="button_link_remember" mat-flat-button target="_blank">
-      <span class="form_text">Esqueceu a senha?</span>
-    </a>
-  </div>
-  <div class="div_new_account">
-    <a class="button_link_remember" mat-flat-button (click)="signUpModal()" >
-      <span class="form_text">Nova conta?</span>
-    </a>
-  </div>
 </form>

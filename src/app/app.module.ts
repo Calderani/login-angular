@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// Angular Material Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { LoginFormComponent } from './login-form/login-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
+// Components
+import { LoginFormComponent } from './login-form/login-form.component';
 import { TitleHeaderComponent } from './title-header/title-header.component';
+import { SignUpModalComponent } from './sign-up-modal/sign-up-modal.component';
 
 
 
@@ -17,7 +21,8 @@ import { TitleHeaderComponent } from './title-header/title-header.component';
   declarations: [
     AppComponent,
     LoginFormComponent,
-    TitleHeaderComponent
+    TitleHeaderComponent,
+    SignUpModalComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,9 @@ import { TitleHeaderComponent } from './title-header/title-header.component';
     MatGridListModule,
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,31 @@
 mat-form-field {
   width: 100%;
 }
+
+a {
+  color: #673ab7;
+}
+
+.input_login_form {
+  padding-bottom: 10px;
+}
+
+.form_text {
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.div_remember {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div_new_account {
+  display: flex;
+  justify-content: center;
+}
+
+.button_link_remember {
+  padding: 0 0 0 0;
+}
