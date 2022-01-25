@@ -16,7 +16,9 @@ export class LoginFormComponent implements OnInit {
   }
 
   signUpModal = () => {
-    const dialogRef = this.dialog.open(SignUpModalComponent);
+    const dialogRef = this.dialog.open(SignUpModalComponent, {
+      width: '400px'
+    });
   }
 
 }

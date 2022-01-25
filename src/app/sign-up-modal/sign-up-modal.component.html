@@ -1,8 +1,8 @@
 <form>
-  <p class="input_login_form">
+  <p class="input_signup_form">
     <mat-form-field appearance="outline">
       <mat-label>E-mail</mat-label>
-      <input matInput placeholder="Insira seu e-mail">
+      <input type="email" matInput placeholder="Insira seu e-mail">
     </mat-form-field>
   </p>
   <p>
@@ -14,12 +14,14 @@
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
+  </p>
+  <p>
     <mat-form-field appearance="outline">
-      <input matInput placeholder="Confirme o seu password" [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
+      <input matInput placeholder="Confirme o seu password" type="password">
     </mat-form-field>
   </p>
+
+  <div>
+    <button class="signup_button" mat-raised-button color="primary">CADASTRAR</button>
+  </div>
 </form>
