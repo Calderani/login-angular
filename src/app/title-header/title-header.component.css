@@ -1,0 +1,12 @@
+.header {
+  font-family: 'Orbitron';
+  margin-bottom: 1.875rem;;
+  color: #9327db;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+}

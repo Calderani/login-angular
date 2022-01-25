@@ -3,3 +3,7 @@
   background-size: cover;
   background-position: center;
 }
+
+app-login-form {
+  width: 70%;
+}
