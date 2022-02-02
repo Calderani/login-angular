@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // Angular Material Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -15,6 +16,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { TitleHeaderComponent } from './title-header/title-header.component';
 import { SignUpModalComponent } from './sign-up-modal/sign-up-modal.component';
+
 
 
 
@@ -35,7 +37,8 @@ import { SignUpModalComponent } from './sign-up-modal/sign-up-modal.component';
     MatButtonModule,
     MatCheckboxModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

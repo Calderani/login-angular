@@ -2,8 +2,25 @@
   background-image: url("/assets/drugstore.gif");
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 
-app-login-form {
-  width: 70%;
+.form_container {
+  flex: 1;
+  min-height: 100vh;
+  padding: 173px 55px 15px 55px;
+}
+
+@media screen and (max-width: 450px) {
+  .form_container {
+    padding: 173px 20px 55px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .rain_image {
+    width: 0;
+    background: none;
+    display: none;
+  }
 }
