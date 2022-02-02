@@ -11,6 +11,16 @@ mat-form-field {
   width: 100%;
 }
 
+input {
+  padding-bottom: 1px !important;
+  margin-bottom: 1px !important;
+}
+
 .mat-form-field-wrapper {
   padding-bottom: 0rem !important;
+}
+
+.error_message {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 }

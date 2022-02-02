@@ -1,23 +1,30 @@
-<form>
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
   <p class="input_signup_form">
     <mat-form-field appearance="outline">
       <mat-label>E-mail</mat-label>
-      <input type="email" matInput placeholder="Insira seu e-mail">
+      <input name="email" [(ngModel)]="signup_form.email" #email="ngModel" type="email" matInput
+        placeholder="Insira seu e-mail" required email>
+      <mat-error *ngIf="email.errors?.['required']">O email é necessário</mat-error>
+      <mat-error *ngIf="email.errors?.['email']">Por favor insira um e-mail válido</mat-error>
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput placeholder="Insira seu password" [type]="hide ? 'password' : 'text'">
+      <input name="password" [(ngModel)]="signup_form.password" #password="ngModel" matInput
+        placeholder="Insira seu password" [type]="hide ? 'password' : 'text'" required>
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
         [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
+      <mat-error *ngIf="password.errors?.['required']">A senha é necessária</mat-error>
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="outline">
-      <input matInput placeholder="Confirme o seu password" type="password">
+      <input name="confirm_password" [(ngModel)]="signup_form.confirm_password" #confirm_password="ngModel" matInput
+        placeholder="Confirme o seu password" type="password" pattern="{{ password.value }}">
+        <mat-error *ngIf="confirm_password.errors?.['pattern']">As senhas não se correspondem</mat-error>
     </mat-form-field>
   </p>
 

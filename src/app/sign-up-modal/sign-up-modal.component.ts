@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpModalComponent implements OnInit {
   hide = true;
+  signup_form = {
+    email: null,
+    password: null,
+    confirm_password: null
+  }
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(): void {
+    console.log(this.signup_form);
   }
 
 }
